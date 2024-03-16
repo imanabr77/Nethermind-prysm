@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nethermind
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nethermind
+  template:
+    metadata:
+      labels:
+        app: nethermind
+    spec:
+      containers:
+      - name: nethermind
+        image: nethermind/nethermind:1.25.4
+        command: ["--config", "goerli", "--Metrics.Enabled", "true"]
+        volumeMounts:
+        - name: db-volume
+          mountPath: /nethermind/nethermind_db
+        - name: logs-volume
+          mountPath: /nethermind/logs
+        - name: keystore-volume-nethermind
+          mountPath: /nethermind/keystore
+      volumes:
+      - name: db-volume
+        hostPath:
+          path: /home/eth-node/db
+      - name: logs-volume
+        hostPath:
+          path: /home/eth-node/logs 
+      - name : keystore-volume-nethermind
+        hostPath : 
+           path : /home/eth-node/keystore 

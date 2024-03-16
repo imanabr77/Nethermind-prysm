@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: beacon-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: beacon-node
+  template:
+    metadata:
+      labels:
+        app: beacon-node
+    spec:
+      containers:
+      - name: beacon-node
+        image: gcr.io/prysmaticlabs/prysm/beacon-chain:latest
+        ports:
+        - containerPort: 4000
+        - containerPort: 13000
+          protocol: UDP
+        volumeMounts:
+        - name: eth2-data
+          mountPath: /data
+        - name: keystore-volume
+          mountPath: /keystore
+        command:
+        - "--datadir=/data"
+        - "--jwt-secret=/keystore/jwt-secret"
+        - "--rpc-host=0.0.0.0"
+        - "--grpc-gateway-host=0.0.0.0"
+        - "--monitoring-host=0.0.0.0"
+        - "--execution-endpoint=http://localhost:8551"
+      volumes:
+      - name: eth2-data
+        hostPath:
+          path: $HOME/.eth2
+      - name: keystore-volume
+        hostPath:
+          path: /home/eth-node/keystore
