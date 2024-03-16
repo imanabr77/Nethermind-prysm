@@ -1,0 +1,32 @@
+version : "3.8"
+services:
+  beacon-node:
+    container_name: beacon-node
+    image: gcr.io/prysmaticlabs/prysm/beacon-chain:latest
+    network_mode: "host"
+    ports:
+      - "4000:4000"
+      - "13000:13000"
+      - "12000:12000/udp"
+    volumes:
+      - $HOME/.eth2:/data
+      - /home/eth-node/keystore:/keystore
+    command: >
+      --datadir=/data
+      --jwt-secret=/keystore/jwt-secret
+      --rpc-host=0.0.0.0
+      --grpc-gateway-host=0.0.0.0
+      --monitoring-host=0.0.0.0
+      --execution-endpoint=http://localhost:8551
+
+  nethermind:
+    image: nethermind/nethermind:1.25.4
+    container_name: nethermind
+    network_mode: host
+    volumes:
+      - /home/eth-node/db:/nethermind/nethermind_db
+      - /home/eth-node/logs:/nethermind/logs
+      - /home/eth-node/keystore:/nethermind/keystore
+    command: '--config goerli --Metrics.Enabled true'
+    depends_on:
+    - beacon-node
