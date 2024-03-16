@@ -21,7 +21,5 @@ Our work touches every part of the Ethereum and Starknet ecosystem, from our ful
 
 
 ### Prysm
-![image](https://github.com/imanabr77/Nethermind-prysm/assets/92488673/03fead84-c49b-4eb8-9c6c-075fc70f0a73)
-
 A full-featured client for the Ethereum Proof-of-Stake protocol, written in Go
 The Prysm project is a Go implementation of the Ethereum protocol as detailed by its official specification. It contains a full beacon node implementation as well as a validator client for participating in blockchain consensus. Prysm utilizes top tools for production servers and interprocess communication, using Google's gRPC library, BoltDB as an optimized, persistent, key-value store, and libp2p by Protocol Labs for all peer-to-peer networking.
