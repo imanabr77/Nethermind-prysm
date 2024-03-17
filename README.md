@@ -25,5 +25,5 @@ The Prysm project is a Go implementation of the Ethereum protocol as detailed by
 
 
 > [!INSTALLATION]
-> 1- For the initial setup, you can only use the Docker-compose file and launch it by running the Docker compose up -d command.
+1- For the initial setup, you can only use the Docker-compose file and launch it by running the Docker compose up -d command.
 > 
