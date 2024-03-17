@@ -4,11 +4,10 @@
 
 ### Why Ethereum?
 > We are strong believers in Ethereum, a public blockchain that allows anyone to build unstoppable, censorship-resistant applications. On Ethereum, anyone can deploy software that controls digital value and is accessible around the world. Born in 2014, the Ethereum network houses over $60 billion worth of value today, hosting projects such as:
-— Global, decentralized organizations
-— Non-reserve-backed, stable-value currencies
-— Fully-open, permissionless, financial applications
-We believe Ethereum represents a fundamental shift in how financial systems operate and are dedicated to its mission.
 
+* Global, decentralized organizations
+* Non-reserve-backed, stable-value currencies
+* Fully-open, permissionless, financial applications
 
 
 
