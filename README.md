@@ -11,21 +11,18 @@
 
 
 
-### Building blocks for a
-decentralized infrastructure
-Our work touches every part of the Ethereum and Starknet ecosystem, from our full nodes to cryptography research and application-layer protocol development.
+### Nethermind
 ![image](https://github.com/imanabr77/Nethermind-prysm/assets/92488673/c648ebd8-0409-464e-b9af-1975bedfceb3)
-
 
 
 
 ### Prysm
 A full-featured client for the Ethereum Proof-of-Stake protocol, written in Go
-The Prysm project is a Go implementation of the Ethereum protocol as detailed by its official specification. It contains a full beacon node implementation as well as a validator client for participating in blockchain consensus. Prysm utilizes top tools for production servers and interprocess communication, using Google's gRPC library, BoltDB as an optimized, persistent, key-value store, and libp2p by Protocol Labs for all peer-to-peer networking.
+The Prysm project is a Go implementation of the Ethereum protocol as detailed by its official specification. 
 
 ### installation
 
 | Command | Description |
 | --- | --- |
-| docker compose up -d  | For installation with monitoring  |
-| chmod +x | For executable in deploy node on Kubernetes and run ./deply.sh  |
+|  docker compose up -d   | For installation with monitoring  |
+|  chmod +x  | For executable in deploy node on Kubernetes and run ./deply.sh  |
