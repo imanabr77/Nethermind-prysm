@@ -26,3 +26,8 @@ The Prysm project is a Go implementation of the Ethereum protocol as detailed by
 | --- | --- |
 |  docker compose up -d   | For installation with monitoring  |
 |  chmod +x  | For executable in deploy node on Kubernetes and run ./deply.sh  |
+
+![image](https://github.com/imanabr77/Nethermind-prysm/assets/92488673/5228f94a-878a-45a3-b762-200806f11b9f)
+![image](https://github.com/imanabr77/Nethermind-prysm/assets/92488673/f8a12a3f-0ebf-4c34-a487-9e2313b0d577)
+
+
